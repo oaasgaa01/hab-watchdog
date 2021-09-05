@@ -1,0 +1,24 @@
+{
+  "name": "hab-watchdog",
+  "version": "0.1.0",
+  "description": "Watchdog to monitor deviations in Openhab",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oaasgaa01/hab-watchdog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oaasgaa01/hab-watchdog/issues"
+  },
+  "homepage": "https://github.com/oaasgaa01/hab-watchdog#readme",
+  "dependencies": {
+    "axios": "^0.21.3",
+    "config": "^3.3.6",
+    "debug": "^4.3.2"
+  }
+}

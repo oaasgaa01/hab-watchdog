@@ -1,0 +1,15 @@
+{
+  "tempZones": {
+    "groupTempZones": "gTempZones",
+    "groupThermostats": "gThermostats",
+    "groupThermostatsFloorFast": "gThermostatsFloorFast",
+    "groupTempSensors": "gTempSensors",
+    "groupPowerSwitches": "gPowerSwitches",
+    "outdoorTempSensor": "NetatmoOutdoor_Temperature"
+  },
+  "dbPath": "./db_dev/",
+  "baseEndpoint": "http://192.168.1.51:16107/rest",
+  "maxTempFloorFast": 22,
+  "debugApiCalls": false,
+  "token": "oh.heating.Tsquww3TWmdraykin5BzZECq31Vfe7GA2TdirlvMiA9mIuTHEoh57YnRCADQWoh4BV7sKPOtOTutstBw5uQ"
+}

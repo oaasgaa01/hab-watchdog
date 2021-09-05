@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hab-watchdog
+spec:
+  selector:
+    matchLabels:
+      app: hab-watchdog
+  template:
+    metadata:
+      labels:
+        app: hab-watchdog
+    spec:
+      containers:
+      - name: hab-watchdog
+        image: <Image>
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
