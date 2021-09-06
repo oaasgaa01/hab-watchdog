@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: hab-watchdog
 spec:
+  replicas: 1
   selector:
     matchLabels:
       app: hab-watchdog
@@ -13,10 +14,12 @@ spec:
     spec:
       containers:
       - name: hab-watchdog
-        image: <Image>
+        image: oaasgaa01/hab-watchdog:0.1.1
         resources:
           limits:
             memory: "128Mi"
             cpu: "500m"
         ports:
         - containerPort: 80
+      imagePullSecrets:
+        - name: regcred

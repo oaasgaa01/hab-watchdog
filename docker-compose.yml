@@ -1,0 +1,4 @@
+version: "3"
+services:
+  server:
+    image: oaasgaa01/hab-watchdog:0.1.1
