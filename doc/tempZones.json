@@ -1,0 +1,251 @@
+[
+  {
+    "members": [
+      {
+        "link": "http://192.168.1.51:16107/rest/items/gTempZones",
+        "state": "OFF",
+        "type": "Switch",
+        "name": "ZWaveNode006_Switch",
+        "label": "Living heater (wall)",
+        "category": "Switch",
+        "tags": ["Switch", "Power"],
+        "groupNames": [
+          "gPowerSwitches",
+          "gTempZone_H_FF_Living",
+          "ZWaveNode006"
+        ]
+      },
+      {
+        "link": "http://192.168.1.51:16107/rest/items/gTempZones",
+        "state": "20.299999237060546875 °C",
+        "stateDescription": {
+          "pattern": "%.1f %unit%",
+          "readOnly": true,
+          "options": []
+        },
+        "type": "Number:Temperature",
+        "name": "MainIndoorStation_Temperature",
+        "label": "Temperature",
+        "category": "Temperature",
+        "tags": ["Measurement", "Temperature"],
+        "groupNames": [
+          "MainIndoorStation",
+          "gTempSensors",
+          "gTempZone_H_FF_Living"
+        ]
+      },
+      {
+        "link": "http://192.168.1.51:16107/rest/items/gTempZones",
+        "state": "12",
+        "type": "String",
+        "name": "Thermostat_Living",
+        "label": "Set room temp",
+        "category": "heating",
+        "tags": ["Equipment"],
+        "groupNames": ["H1Living", "gTempZone_H_FF_Living", "gThermostats"]
+      },
+      {
+        "link": "http://192.168.1.51:16107/rest/items/gTempZones",
+        "state": "OFF",
+        "type": "Switch",
+        "name": "ZWaveNode005_Switch",
+        "label": "Living heater (fan)",
+        "category": "Switch",
+        "tags": ["Point"],
+        "groupNames": [
+          "gPowerSwitches",
+          "gTempZone_H_FF_Living",
+          "ZWaveNode005"
+        ]
+      }
+    ],
+    "link": "http://192.168.1.51:16107/rest/items/gTempZones",
+    "state": "NULL",
+    "type": "Group",
+    "name": "gTempZone_H_FF_Living",
+    "label": "Temp zone Living",
+    "category": "",
+    "tags": [],
+    "groupNames": ["gTempZones"]
+  },
+  {
+    "members": [
+      {
+        "link": "http://192.168.1.51:16107/rest/items/gTempZones",
+        "state": "10.0 °C",
+        "type": "Number:Temperature",
+        "name": "Thermostat_Greenhouse",
+        "label": "Set temp",
+        "category": "heating",
+        "tags": ["RadiatorControl"],
+        "groupNames": ["Greenhouse", "gTempZone_Greenhouse", "gThermostats"]
+      },
+      {
+        "link": "http://192.168.1.51:16107/rest/items/gTempZones",
+        "state": "25.98 °C",
+        "stateDescription": {
+          "pattern": "%.1f %unit%",
+          "readOnly": true,
+          "options": []
+        },
+        "type": "Number:Temperature",
+        "name": "Huetemperaturesensor8_Temperature",
+        "label": "Temperature",
+        "category": "Temperature",
+        "tags": ["Measurement", "Temperature"],
+        "groupNames": [
+          "Huetemperaturesensor8",
+          "gTempSensors",
+          "gTempZone_Greenhouse"
+        ]
+      }
+    ],
+    "link": "http://192.168.1.51:16107/rest/items/gTempZones",
+    "state": "NULL",
+    "type": "Group",
+    "name": "gTempZone_Greenhouse",
+    "label": "Temp zone Greenhouse",
+    "category": "",
+    "tags": [],
+    "groupNames": ["gTempZones"]
+  },
+  {
+    "members": [
+      {
+        "link": "http://192.168.1.51:16107/rest/items/gTempZones",
+        "state": "OFF",
+        "type": "Switch",
+        "name": "ZWaveNode003_Switch",
+        "label": "Switch",
+        "category": "Switch",
+        "tags": ["Point"],
+        "groupNames": [
+          "gPowerSwitches",
+          "gTempZone_H_FF_Kitchen",
+          "ZWaveNode003"
+        ]
+      },
+      {
+        "link": "http://192.168.1.51:16107/rest/items/gTempZones",
+        "state": "18 °C",
+        "stateDescription": {
+          "pattern": "%.0f",
+          "readOnly": false,
+          "options": []
+        },
+        "type": "Number:Temperature",
+        "name": "ZWaveNode007_Setpointheating",
+        "label": "Setpoint (heating)",
+        "category": "Heating",
+        "tags": ["Point"],
+        "groupNames": [
+          "gTempZone_H_FF_Kitchen",
+          "gThermostatsFloorFast",
+          "ZWaveNode007"
+        ]
+      },
+      {
+        "link": "http://192.168.1.51:16107/rest/items/gTempZones",
+        "state": "16",
+        "type": "String",
+        "name": "Thermostate_Kitchen_Room",
+        "label": "Set room temp",
+        "category": "heating",
+        "tags": ["Equipment"],
+        "groupNames": ["H1Kitchen", "gTempZone_H_FF_Kitchen", "gThermostats"]
+      },
+      {
+        "link": "http://192.168.1.51:16107/rest/items/gTempZones",
+        "state": "ON",
+        "type": "Switch",
+        "name": "ZWaveNode004_Switch",
+        "label": "Switch",
+        "category": "Switch",
+        "tags": ["Point"],
+        "groupNames": ["gPowerSwitches", "gTempZone_H_FF_Kitchen"]
+      },
+      {
+        "link": "http://192.168.1.51:16107/rest/items/gTempZones",
+        "state": "20.6000003814697265625 °C",
+        "stateDescription": {
+          "pattern": "%.1f %unit%",
+          "readOnly": true,
+          "options": []
+        },
+        "type": "Number:Temperature",
+        "name": "NetatmoKitchen_Temperature",
+        "label": "Temperature",
+        "category": "Temperature",
+        "tags": ["Measurement", "Temperature"],
+        "groupNames": [
+          "NetatmoKitchen",
+          "gTempSensors",
+          "gTempZone_H_FF_Kitchen"
+        ]
+      }
+    ],
+    "link": "http://192.168.1.51:16107/rest/items/gTempZones",
+    "state": "NULL",
+    "type": "Group",
+    "name": "gTempZone_H_FF_Kitchen",
+    "label": "Temp zone Kitchen",
+    "category": "",
+    "tags": [],
+    "groupNames": ["gTempZones"]
+  },
+  {
+    "members": [
+      {
+        "link": "http://192.168.1.51:16107/rest/items/gTempZones",
+        "state": "10.0",
+        "type": "Number",
+        "name": "Thermostat_Ap_Bathroom",
+        "label": "Set room temp",
+        "category": "heating",
+        "tags": ["RadiatorControl"],
+        "groupNames": ["BathRoom", "gTempZone_H_Apt_Bathroom", "gThermostats"]
+      },
+      {
+        "link": "http://192.168.1.51:16107/rest/items/gTempZones",
+        "state": "17.28 °C",
+        "stateDescription": {
+          "pattern": "%.1f %unit%",
+          "readOnly": true,
+          "options": []
+        },
+        "type": "Number:Temperature",
+        "name": "Huetemperaturesensor10_Temperature",
+        "label": "Apt Bathroom Temp",
+        "category": "Temperature",
+        "tags": ["Measurement", "Temperature"],
+        "groupNames": [
+          "Huetemperaturesensor10",
+          "gTempSensors",
+          "gTempZone_H_Apt_Bathroom"
+        ]
+      },
+      {
+        "link": "http://192.168.1.51:16107/rest/items/gTempZones",
+        "state": "OFF",
+        "type": "Switch",
+        "name": "ZWaveNode002_Switch",
+        "label": "Apt Bathroom Heater",
+        "category": "Switch",
+        "tags": ["Switch", "Power"],
+        "groupNames": [
+          "ZWaveNode002",
+          "gPowerSwitches",
+          "gTempZone_H_Apt_Bathroom"
+        ]
+      }
+    ],
+    "link": "http://192.168.1.51:16107/rest/items/gTempZones",
+    "state": "NULL",
+    "type": "Group",
+    "name": "gTempZone_H_Apt_Bathroom",
+    "label": "Temp zone Apt Bathroom",
+    "category": "",
+    "tags": [],
+    "groupNames": ["gTempZones"]
+  }
+]
