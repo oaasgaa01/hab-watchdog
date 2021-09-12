@@ -3,7 +3,9 @@ const TempZone = require("./tempZone");
 const config = require("config");
 const http = require("./http");
 const { groupTempZones } = config.get("tempZones");
+const { sendNotification } = require("./notifications");
 
+const checkInterval = 15; // Polling interval in minutes
 const zones = [];
 initZones();
 
@@ -12,24 +14,39 @@ async function initZones() {
     config.get("baseEndpoint") + "/items/" + groupTempZones
   );
 
+  // For testing one temp zone
+  // const zoneClass = new TempZone({ zoneName: "gTempZone_H_FF_Kitchen" });
+  // zones.push(zoneClass);
+
   data.members.forEach((zone) => {
-    // console.log(zone.name);
-    const zoneClass = new TempZone(zone.name);
+    const zoneClass = new TempZone({ zoneName: zone.name });
     zones.push(zoneClass);
   });
 }
 
-async function readZones() {
-  debug("readZones()");
+async function checkZones() {
+  debug("checkZones()");
 
-  zones.forEach((zone) => {
-    // console.log(zone.zoneName);
-    // await zone.readZone();
-    const isHealty = zone.isHealthy();
-  });
+  for (let i = 0; i < zones.length; i++) {
+    const zone = zones[i];
+    const isHealty = await zone.isHealthy();
+    console.log(zone.zoneName, "\t", zone.status.msg);
+
+    if (zone.status && zone.status.code !== 0)
+      notify(zone.zoneName, zone.status.msg);
+  }
 }
 
-// Start the polling loop
+// Start the polling loop for checking zones
 setInterval(function () {
-  readZones();
-}, 3000);
+  checkZones();
+}, checkInterval * 60 * 1000);
+
+function notify(name, msg) {
+  const params = {
+    subject: "Warning from hab-watchdog",
+    html: `<h1>TempZone '${name}': ${msg}</h1>`,
+    text: `TempZone '${name}': ${msg}`,
+  };
+  sendNotification(params);
+}

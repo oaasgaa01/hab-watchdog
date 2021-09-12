@@ -19,6 +19,8 @@
   "dependencies": {
     "axios": "^0.21.3",
     "config": "^3.3.6",
-    "debug": "^4.3.2"
+    "debug": "^4.3.2",
+    "nodejs-nodemailer-outlook": "^1.2.4",
+    "nodemailer": "^6.6.3"
   }
 }
