@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: hab-watchdog
-          image: oaasgaa01/hab-watchdog:0.1.3
+          image: oaasgaa01/hab-watchdog:0.1.4
           resources:
             limits:
               memory: "128Mi"

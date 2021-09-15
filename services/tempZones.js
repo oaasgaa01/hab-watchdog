@@ -7,8 +7,11 @@ const { sendNotification } = require("./notifications");
 
 const checkInterval = 15; // Polling interval in minutes
 const zones = [];
+const ignoreZones = config.get("ignoreZones");
+
 initZones();
 
+// Initialize instances of TempZones
 async function initZones() {
   const { data } = await http.get(
     config.get("baseEndpoint") + "/items/" + groupTempZones
@@ -18,10 +21,15 @@ async function initZones() {
   // const zoneClass = new TempZone({ zoneName: "gTempZone_H_FF_Kitchen" });
   // zones.push(zoneClass);
 
-  data.members.forEach((zone) => {
-    const zoneClass = new TempZone({ zoneName: zone.name });
+  for (let i = 0; i < data.members.length; i++) {
+    const zone = data.members[i];
+    const { name: zoneName } = zone;
+
+    // Skip ignored zones
+    if (ignoreZones.find((x) => x === zoneName)) continue;
+    const zoneClass = new TempZone({ zoneName });
     zones.push(zoneClass);
-  });
+  }
 }
 
 async function checkZones() {

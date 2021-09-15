@@ -7,6 +7,7 @@
     "groupPowerSwitches": "gPowerSwitches",
     "outdoorTempSensor": "NetatmoOutdoor_Temperature"
   },
+  "ignoreZones": ["gTempZone_Greenhouse"],
   "dbPath": "./db_dev/",
   "baseEndpoint": "http://192.168.1.51:16107/rest",
   "maxTempFloorFast": 22,
