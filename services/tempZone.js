@@ -19,7 +19,7 @@ const debug = require("debug")("app:/services/tempZone");
 const config = require("config");
 const http = require("./http");
 const tolerance = 2;
-const pollingInterval = 30; // I seconds
+const pollingInterval = 60; // I seconds
 const logToConsole = true;
 
 const {
